@@ -65,16 +65,16 @@
             </div>
 
             <div class="details">
-                    <button onclick = "location.href = 'rest/userservices/showallcomments'" id="showallcomments">View All Comments</button>
+                    <button onclick = "location.href = 'http://localhost:8080/rest/userservices/showallcomments'" id="showallcomments">View All Comments</button>
                   	<button onclick = openShowUserCommentForm() id="showusercomments">Show User Comments</button>
                     <button onclick = openAddCommentForm() id="addusercomment">Add Comment</button>
-                    <form action="rest/userservices/showusercomments" method="get" id="showusercommentsform" style="display: none;">
+                    <form action="http://localhost:8080/rest/userservices/showusercomments" method="get" id="showusercommentsform" style="display: none;">
                         <label for="email">Email</label><br>
                         <input type="email" name="email" placeholder="Email ID" required><br>  
                         <input type = "submit" value = "Show Comments" id="addcomment"/>
                     </form>
                     
-                    <form action="rest/userservices/addcomment" method="post" id="addcommentform" style="display: none;">
+                    <form action="http://localhost:8080/rest/userservices/addcomment" method="post" id="addcommentform" style="display: none;">
                         <label for="email">Email</label><br>
                         <input type="email" name="email" placeholder="Email ID" required><br>
                         <label for="comment">Comment</label><br>
