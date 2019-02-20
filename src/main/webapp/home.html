@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home Page
+        </title>
+        <style>
+            body {background-color: azure}
+
+            #showusercomments, #showallcomments, #addusercomment, #addcomment {
+                background-color: #12A2AB ;
+                color: white;
+                padding: 14px 20px;
+                margin: 25px 0;
+                border: none;
+                align-content: center;
+                width: 21%;
+                align-items: center;
+            }
+
+           
+
+            input[type=email], textarea {
+                width: 40%;
+                padding: 14px 20px;
+                margin: 12px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                display: inline-block;
+                text-align: center;
+                }
+
+            
+
+            .imagecontainer {
+                text-align: center;
+                margin: 30px 0 20px 0;
+                padding-top: 30px;
+            }
+
+
+            .details {
+                text-align: center;
+            }
+
+            #glogin, #fblogin, #linkedinlogin {
+                text-align: center;
+                padding-top: 100px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .otherLoginModes{
+                text-align: center;
+            }
+
+           
+        </style>
+    </head>
+    <body>
+        <h2 align="center">Welcome to QAInfotech</h2>
+        
+            <div class="imagecontainer">
+                <img src="images/login_avatar.png" alt="login_avatar" class="login_avatar">
+            </div>
+
+            <div class="details">
+                    <button onclick = "location.href = 'rest/userservices/showallcomments'" id="showallcomments">View All Comments</button>
+                  	<button onclick = openShowUserCommentForm() id="showusercomments">Show User Comments</button>
+                    <button onclick = openAddCommentForm() id="addusercomment">Add Comment</button>
+                    <form action="rest/userservices/showusercomments" method="get" id="showusercommentsform" style="display: none;">
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" placeholder="Email ID" required><br>  
+                        <input type = "submit" value = "Show Comments" id="addcomment"/>
+                    </form>
+                    
+                    <form action="rest/userservices/addcomment" method="post" id="addcommentform" style="display: none;">
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" placeholder="Email ID" required><br>
+                        <label for="comment">Comment</label><br>
+                        <textarea name="comment" placeholder="Add your comment"required></textarea><br>
+                        <input type = "submit" value = "Add Comment" id="addcomment"/>
+                    </form>
+            </div>
+
+            <div class="otherLoginModes"> 
+                <a href="www.google.com"><img src="images/google.png" alt="google_login" id="glogin"></a>
+                <a href="www.facebook.com"><img src="images/facebook.png" alt="facebook_login" id="fblogin" ></a>
+                <a href="www.linkedin.com"><img src="images/linkedin.png" alt="linkedin" id="linkedinlogin"></a>
+
+            </div>
+
+            <script>
+                function openAddCommentForm() {
+                  document.getElementById("showusercommentsform").style.display = "none";
+                  document.getElementById("addcommentform").style.display = "block";
+                }
+                
+                function openShowUserCommentForm() {
+                    document.getElementById("addcommentform").style.display = "none";
+                    document.getElementById("showusercommentsform").style.display = "block";
+                    
+                  }
+                </script>
+        
+        
+    </body>
+</html>

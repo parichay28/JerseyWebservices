@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Welcome Page
+        </title>
+        <style>
+            body {background-color: azure}
+
+            #login {
+                background-color: #12A2AB ;
+                color: white;
+                padding: 14px 20px;
+                margin: 25px 0;
+                border: none;
+                align-content: center;
+                width: 21%;
+                align-items: center;
+            }
+
+            #signup {
+                background-color: #12A2AB ;
+                color: white;
+                padding: 14px 20px;
+                margin: 25px 0;
+                border: none;
+                align-content: center;
+                width: 21%;
+                align-items: center;
+            }
+
+            
+
+            .imagecontainer {
+                text-align: center;
+                margin: 30px 0 20px 0;
+                padding-top: 30px;
+            }
+
+
+            .details {
+                text-align: center;
+            }
+
+            #glogin, #fblogin, #linkedinlogin {
+                text-align: center;
+                padding-top: 100px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .otherLoginModes{
+                text-align: center;
+            }
+
+           
+        </style>
+    </head>
+    <body>
+        <h2 align="center">Welcome to QAInfotech</h2>
+        
+            <div class="imagecontainer">
+                <img src="images/login_avatar.png" alt="login_avatar" class="login_avatar">
+            </div>
+
+            <div class="details">
+
+
+                    <button onclick = "location.href = 'login.html'" id="login">Login</button>
+                    <button onclick = "location.href = 'signup.html'" id="signup">SignUp</button>
+                    
+            </div>
+
+            <div class="otherLoginModes"> 
+                <a href="www.google.com"><img src="images/google.png" alt="google_login" id="glogin"></a>
+                <a href="www.facebook.com"><img src="images/facebook.png" alt="facebook_login" id="fblogin" ></a>
+                <a href="www.linkedin.com"><img src="images/linkedin.png" alt="linkedin" id="linkedinlogin"></a>
+
+            </div>
+        
+        
+    </body>
+</html>
